@@ -34,6 +34,7 @@ class Router
   def display_rider_menu
     puts "1. List my undelivered orders"
     puts "2. Mark as delivered"
+    puts "8. Logout"
     puts '9. Quit'
   end
 
@@ -43,6 +44,8 @@ class Router
       @orders_controller.list_my_orders(@employee)
     when 2
       @orders_controller.mark_as_delivered(@employee)
+    when 8
+      @employee = nil
     when 9
       puts 'Good bye zo/'
       @employee = nil
