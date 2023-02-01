@@ -1,0 +1,24 @@
+class Employee
+  attr_reader :username, :password
+  # STATE/ATTRIBUTES
+  # id       #=> Integer
+  # username #=> String
+  # password #=> String
+  # role     #=> String
+  def initialize(attributes = {})
+    @id = attributes[:id]
+    @username = attributes[:username]
+    @password = attributes[:password]
+    @role = attributes[:role]
+  end
+
+  # BEHAVIORS
+
+  def manager?
+    @role == 'manager'
+  end
+
+  def rider?
+    @role == 'rider'
+  end
+end
