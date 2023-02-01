@@ -1,5 +1,6 @@
 class Employee
   attr_reader :username, :password
+  attr_accessor :id
   # STATE/ATTRIBUTES
   # id       #=> Integer
   # username #=> String
